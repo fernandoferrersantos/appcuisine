@@ -13,6 +13,7 @@
 		1C16437E1E293AEA003AC4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C16437D1E293AEA003AC4EC /* Assets.xcassets */; };
 		1C16438B1E293FE2003AC4EC /* MarsRoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */; };
 		1C16438C1E293FE2003AC4EC /* MarsRoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */; };
+		1C6B97281E294C8B00BC54E4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B97271E294C8B00BC54E4 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		1C1643881E293FE2003AC4EC /* MarsRoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsRoverTableViewCell.h; sourceTree = "<group>"; };
 		1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarsRoverTableViewCell.m; sourceTree = "<group>"; };
 		1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarsRoverTableViewCell.xib; sourceTree = "<group>"; };
+		1C6B97261E294C8B00BC54E4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1C6B97271E294C8B00BC54E4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				1C1643881E293FE2003AC4EC /* MarsRoverTableViewCell.h */,
 				1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */,
 				1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */,
+				1C6B97261E294C8B00BC54E4 /* DetailViewController.h */,
+				1C6B97271E294C8B00BC54E4 /* DetailViewController.m */,
 			);
 			path = appcuisineObjC;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6B97281E294C8B00BC54E4 /* DetailViewController.m in Sources */,
 				1C1643791E293AEA003AC4EC /* ViewController.m in Sources */,
 				1C1643761E293AEA003AC4EC /* AppDelegate.m in Sources */,
 				1C1643731E293AEA003AC4EC /* main.m in Sources */,
@@ -297,6 +303,7 @@
 				1C1643871E293AEA003AC4EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

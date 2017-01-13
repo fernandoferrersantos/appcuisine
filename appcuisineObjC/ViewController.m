@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MarsRoverTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -152,6 +153,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MarsRoverTableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    // perform required operation
+    UIImage *image = selectedCell.cameraImageView.image;
+    
+    DetailViewController *detailVC = [[DetailViewController alloc] initWithImage:image];
+    [self.navigationController pushViewController:detailVC animated:YES];
     
 }
 
