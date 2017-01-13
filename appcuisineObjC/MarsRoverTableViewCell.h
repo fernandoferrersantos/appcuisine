@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MarsRoverTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *earthDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cameraFullNameLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicatorView;

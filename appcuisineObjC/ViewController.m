@@ -161,6 +161,9 @@
     DetailViewController *detailVC = [[DetailViewController alloc] initWithImage:image];
     [self.navigationController pushViewController:detailVC animated:YES];
     
+//    selectedCell.selected = NO;
+    [tableView reloadData];
+    
 }
 
 

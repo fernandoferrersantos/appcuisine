@@ -16,23 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taA-EV-6Mv">
-                        <rect key="frame" x="244" y="8" width="63" height="63"/>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="taA-EV-6Mv">
+                        <rect key="frame" x="248.5" y="8" width="58.5" height="58.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="taA-EV-6Mv" secondAttribute="height" multiplier="1:1" id="wDw-CS-Jgv"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-p3-ezg">
-                        <rect key="frame" x="17" y="29" width="181" height="21"/>
+                        <rect key="frame" x="17" y="29" width="210" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-aV-lOb">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-aV-lOb">
                         <rect key="frame" x="265" y="30" width="20" height="20"/>
                     </activityIndicatorView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-mJ-9GJ">
@@ -44,11 +44,11 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="taA-EV-6Mv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="0A0-5X-8rg"/>
                     <constraint firstAttribute="bottomMargin" secondItem="taA-EV-6Mv" secondAttribute="bottom" constant="5" id="Ivi-SP-PTa"/>
                     <constraint firstAttribute="trailingMargin" secondItem="taA-EV-6Mv" secondAttribute="trailing" constant="5" id="Mq2-Pw-goD"/>
-                    <constraint firstAttribute="topMargin" secondItem="taA-EV-6Mv" secondAttribute="top" constant="5" id="THP-c3-qgX"/>
-                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerY" secondItem="taA-EV-6Mv" secondAttribute="centerY" id="UMX-fF-qV9"/>
-                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerX" secondItem="taA-EV-6Mv" secondAttribute="centerX" id="vqe-Es-6Bm"/>
+                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerY" secondItem="taA-EV-6Mv" secondAttribute="centerY" constant="2.75" id="UMX-fF-qV9"/>
+                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerX" secondItem="taA-EV-6Mv" secondAttribute="centerX" constant="-2.75" id="vqe-Es-6Bm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

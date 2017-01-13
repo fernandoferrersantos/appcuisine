@@ -21,4 +21,19 @@
     // Configure the view for the selected state
 }
 
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (!self.selected) {
+        [self.actIndicatorView startAnimating];
+        self.actIndicatorView.hidden = NO;
+        
+        self.cameraImageView.hidden = YES;
+    } else {
+        [self.actIndicatorView stopAnimating];
+        self.actIndicatorView.hidden = YES;
+        
+        self.cameraImageView.hidden = NO;
+    }
+}
 @end
