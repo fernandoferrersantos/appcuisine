@@ -11,6 +11,8 @@
 		1C1643761E293AEA003AC4EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1643751E293AEA003AC4EC /* AppDelegate.m */; };
 		1C1643791E293AEA003AC4EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1643781E293AEA003AC4EC /* ViewController.m */; };
 		1C16437E1E293AEA003AC4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C16437D1E293AEA003AC4EC /* Assets.xcassets */; };
+		1C16438B1E293FE2003AC4EC /* MarsRoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */; };
+		1C16438C1E293FE2003AC4EC /* MarsRoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		1C1643781E293AEA003AC4EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1C16437D1E293AEA003AC4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C1643821E293AEA003AC4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C1643881E293FE2003AC4EC /* MarsRoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsRoverTableViewCell.h; sourceTree = "<group>"; };
+		1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarsRoverTableViewCell.m; sourceTree = "<group>"; };
+		1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarsRoverTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,9 @@
 				1C16437D1E293AEA003AC4EC /* Assets.xcassets */,
 				1C1643821E293AEA003AC4EC /* Info.plist */,
 				1C1643711E293AEA003AC4EC /* Supporting Files */,
+				1C1643881E293FE2003AC4EC /* MarsRoverTableViewCell.h */,
+				1C1643891E293FE2003AC4EC /* MarsRoverTableViewCell.m */,
+				1C16438A1E293FE2003AC4EC /* MarsRoverTableViewCell.xib */,
 			);
 			path = appcuisineObjC;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C16437E1E293AEA003AC4EC /* Assets.xcassets in Resources */,
+				1C16438C1E293FE2003AC4EC /* MarsRoverTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +155,7 @@
 				1C1643791E293AEA003AC4EC /* ViewController.m in Sources */,
 				1C1643761E293AEA003AC4EC /* AppDelegate.m in Sources */,
 				1C1643731E293AEA003AC4EC /* main.m in Sources */,
+				1C16438B1E293FE2003AC4EC /* MarsRoverTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

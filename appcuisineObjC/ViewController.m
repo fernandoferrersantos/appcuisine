@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MarsRoverTableViewCell.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,7 +26,10 @@
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     
-    self.view.
+    [self.tableView registerNib:[UINib nibWithNibName:@"MarsRoverTableViewCell" bundle:nil]
+         forCellReuseIdentifier:@"cellId"];
+    
+    self.title = @"NASA Mars Rover";
     
     [self callService];
 }
@@ -39,6 +43,8 @@
 - (void)callService {
     // GCD
     dispatch_async(dispatch_queue_create("search", 0), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
         NSURL *url = [NSURL URLWithString:@"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY"];
         
         NSError *error;
@@ -57,6 +63,8 @@
         } else {
             [self alertNoResults];
         }
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
     });
 }
@@ -95,26 +103,50 @@
     return [self.resultsArray count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
+
 
 #pragma mark - UITableViewDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellId = @"cellId";
-    //    MarsRoverTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellId];
-    //    if (cell == nil) {
-    //        cell = [[MarsRoverTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-    //                                             reuseIdentifier:cellId];
-    //    }
-    
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellId];
+    MarsRoverTableViewCell *cell = (MarsRoverTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:cellId];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:cellId];
+        cell = [[MarsRoverTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                             reuseIdentifier:cellId];
     }
     
     NSDictionary *dict = [self.resultsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [[dict objectForKey:@"camera"] objectForKey:@"full_name"];
+    cell.earthDateLabel.text = [dict objectForKey:@"earth_date"];
+    cell.cameraFullNameLabel.text = [[dict objectForKey:@"camera"] objectForKey:@"full_name"];
+    [cell.actIndicatorView startAnimating];
+    
+    if (indexPath.row % 2 == 0) {
+        cell.backgroundColor = [UIColor whiteColor];
+    } else {
+        cell.backgroundColor = [UIColor lightGrayColor];
+    }
+    
+    dispatch_async(dispatch_queue_create("search", 0), ^{
+        NSURL *url = [NSURL URLWithString:[dict objectForKey:@"img_src"]];
+        
+        NSError *error;
+        NSData *imageData = [NSData dataWithContentsOfURL:url
+                                                  options:NSDataReadingUncached
+                                                    error:&error];
+        
+        if (imageData != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [cell.actIndicatorView stopAnimating];
+                cell.actIndicatorView.hidden = YES;
+                cell.cameraImageView.image = [UIImage imageWithData:imageData];
+                cell.cameraImageView.hidden = NO;
+            });
+        }
+    });
     
     return cell;
 }

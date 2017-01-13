@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MarsRoverTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taA-EV-6Mv">
+                        <rect key="frame" x="244" y="8" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="taA-EV-6Mv" secondAttribute="height" multiplier="1:1" id="wDw-CS-Jgv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-p3-ezg">
+                        <rect key="frame" x="17" y="29" width="181" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-aV-lOb">
+                        <rect key="frame" x="265" y="30" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-mJ-9GJ">
+                        <rect key="frame" x="17" y="8" width="181" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="taA-EV-6Mv" secondAttribute="bottom" constant="5" id="Ivi-SP-PTa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="taA-EV-6Mv" secondAttribute="trailing" constant="5" id="Mq2-Pw-goD"/>
+                    <constraint firstAttribute="topMargin" secondItem="taA-EV-6Mv" secondAttribute="top" constant="5" id="THP-c3-qgX"/>
+                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerY" secondItem="taA-EV-6Mv" secondAttribute="centerY" id="UMX-fF-qV9"/>
+                    <constraint firstItem="ktj-aV-lOb" firstAttribute="centerX" secondItem="taA-EV-6Mv" secondAttribute="centerX" id="vqe-Es-6Bm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actIndicatorView" destination="ktj-aV-lOb" id="tKH-Ec-beY"/>
+                <outlet property="cameraFullNameLabel" destination="nFE-p3-ezg" id="95k-Yq-x8t"/>
+                <outlet property="cameraImageView" destination="taA-EV-6Mv" id="TaX-kI-7t9"/>
+                <outlet property="earthDateLabel" destination="zXV-mJ-9GJ" id="tZ4-WJ-xEK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
